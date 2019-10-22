@@ -2,9 +2,12 @@
 //TODO: Добавьте правильные параметры
 //TODO: Напишите функцию
 
-function ...(){
-
-
+function h(a, b, c){
+    if (a+b<c || a+c<c || b+c<a)
+        return 1;
+    var p=(a+b+c)/2;
+    var s=Math.sqrt(p*(p-a)*(p-b)*(p-c));
+    return s*2/a;
 }
 
-module.exports = ...;
+module.exports = h;
