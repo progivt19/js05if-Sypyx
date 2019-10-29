@@ -3,17 +3,14 @@
 //TODO: Напишите функцию
 
 function S(x1, y1, x2, y2,x3, y3){
-    var a=Math.sqrt(Math.sqr(x2-x1)+Math.sqr(y2-y1));
-    var b=Math.sqrt(Math.sqr(x3-x1)+Math.sqr(y3-y1));
-    var c=Math.sqrt(Math.sqr(x3-x2)+Math.sqr(y3-y2));
-    if (a==b)
-    if (Math.sqrt(Math.sqr(a)+Math.sqr(b))==c)
+    var a=Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+    var b=Math.sqrt((x3-x1)*(x3-x1)+(y3-y1)*(y3-y1));
+    var c=Math.sqrt((x3-x2)*(x3-x2)+(y3-y2)*(y3-y2));
+    if (a==b && Math.sqrt(a*a+b*b)==c)
     return 'true';
-    if (a==c)
-    if (Math.sqrt(Math.sqr(a)+Math.sqr(c))==b)
+    if (a==c && Math.sqrt(a*a+c*c)==b)
     return 'true';
-    if (c==b)
-    if (Math.sqrt(Math.sqr(b)+Math.sqr(c))==a)
+    if (c==b && Math.sqrt(b*b+c*c)==a)
     return 'true';
     return 'false';
 }
