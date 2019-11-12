@@ -8,4 +8,6 @@ QUnit.test("h(a,b,c)=hа", function(assert){
 	assert.deepEqual(h( 1, 1, 0), 1, "h( 1, 1, 0) === 1")
 	assert.deepEqual(h( 2, 0, 2), 1, "h( 2, 0, 2) === 1")
 	assert.deepEqual(h( 0, 1, 2), 1, "h( 0, 1, 2) === 1")
+	assert.deepEqual(h( -1, 1, 1), 1, "h(-1, 1, 2) === 1")
 });
+
